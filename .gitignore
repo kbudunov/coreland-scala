@@ -1,2 +1,15 @@
-*.class
-*.log
+# Eclipse
+.classpath
+.settings/
+ 
+# Intellij
+.idea/
+*.iml
+*.iws
+ 
+# Maven
+log/
+target/
+
+# App
+out/
