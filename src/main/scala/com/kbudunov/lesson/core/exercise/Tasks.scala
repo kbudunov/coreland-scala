@@ -1,4 +1,4 @@
-package com.kbudunov.lesson.core.anton
+package com.kbudunov.lesson.core.exercise
 
 //Функциональные комбинаторы
 object Tasks extends App {
@@ -47,7 +47,7 @@ object Tasks extends App {
 
 
   val opList3: Option[List[Option[Option[String]]]] = Some(List(Some(Some("1")), Some(Some("2")), Some(Some("3")), Some(Some("4"))))
-  def sumAll3: Int = opList1.flatMap(l=>l.flatMap(e=>e.flatMap(e=>e.map(e=>e.toInt)).sum))
+  //def sumAll3: Int = opList1.flatMap(l=>l.flatMap(e=>e.flatMap(e=>e.map(e=>e.toInt)).sum))
 
 
   println(lstRes)
