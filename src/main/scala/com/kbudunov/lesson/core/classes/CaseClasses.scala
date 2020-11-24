@@ -16,6 +16,20 @@ object CaseClasses extends App {
     case CaseCalculator(_, _) => "Calculator of unknown type"
     case _ => "Calculator of unknown type"
   }
+
+  val a = Person() // corresponds to apply()
+  val b = Person("Pam") // corresponds to apply(name: String)
+  val c = Person("William Shatner", 82)
+  println(a)
+  println(b)
+  println(c)
+
 }
 
 case class CaseCalculator(brand: String, model: String)
+
+case class Person (var name: String, var age: Int)
+object Person {
+  def apply() = new Person("<no name>", 0)
+  def apply(name: String) = new Person(name, 0)
+}

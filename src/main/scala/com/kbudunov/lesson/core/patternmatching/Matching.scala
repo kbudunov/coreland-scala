@@ -44,7 +44,7 @@ class Matching {
   val Two = 2 // added
   val r = (is: @switch) match {
     case 1 => "One"
-    case Two => "Two" // replaced the '2' The problem is here!!!
+    //case Two => "Two" // replaced the '2' The problem is here!!!
     case _ => "Other"
   }
 //  Joshua Suereth states that the following condi‐

@@ -1,8 +1,6 @@
 package com.kbudunov.lesson.core.base
 
 object LoopsVsMap extends App {
-
-
   val upperMap = "hello, world".map(c => c.toUpper)
   val upperForC = for (c <- "hello, world") yield c.toUpper //analog for map
 
@@ -66,4 +64,12 @@ object LoopsVsMap extends App {
   } yield i
   // #5 - translated code
   1.to(10).withFilter(((i) => i.$percent(2).$eq$eq(0))).map(((i) => i))
+
+//  rules:
+//  1. A simple for loop that iterates over a collection is translated to a foreach method call on the collection.
+//  2. A for loop with a guard (see Recipe 3.3) is translated to a sequence of a withFilter
+//  method call on the collection followed by a foreach call.
+//  3. A for loop with a yield expression is translated to a map method call on the collection.
+//  4. A for loop with a yield expression and a guard is translated to a withFilter
+//  method call on the collection, followed by a map method call.
 }

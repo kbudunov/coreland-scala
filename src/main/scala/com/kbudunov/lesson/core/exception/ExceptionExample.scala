@@ -4,8 +4,8 @@ class ExceptionExample {
   try {
     //do smth
   } catch {
-    case e: IllegalArgumentException => println("")
-    case e: RuntimeException => println("")
+    case e: IllegalArgumentException => println(e.printStackTrace())
+    case e: RuntimeException => println(e.printStackTrace())
   } finally {
 
   }
