@@ -84,9 +84,9 @@ class Matching {
     case (a, b) => s"got $a and $b"
     case (a, b, c) => s"got $a, $b, and $c"
 
-    // constructor patterns
-        //case Person(first, "Alexander") => s"found an Alexander, first name = $first"
-        //case Dog("Suka") => "found a dog named Suka"
+//     constructor patterns
+//        case Person(first, "Alexander") => s"found an Alexander, first name = $first"
+//        case Dog("Suka") => "found a dog named Suka"
 
     // typed patterns
     case s: String => s"you gave me this string: $s"
