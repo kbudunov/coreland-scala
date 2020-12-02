@@ -1,9 +1,13 @@
-package com.kbudunov.lesson.core.function
+package com.kbudunov.lesson.core.fp.monad.either
 
-object CurryingEither extends App {
+object EitherFoldCurrying extends App {
 
   //Either[String, Int].fold(String => B, Int => B)
-  val result: String = foo(-5).fold(error("Error: "), success(5))
+
+  val f1: String => String = error("Error: ")
+  val f2: Int => String = success(5)
+
+  val result: String = foo(-5).fold(error("Error: "), success(5)) //f1 and f2
   println(result)
 
   def foo(a: Int): Either[String, Int] = {
@@ -16,8 +20,7 @@ object CurryingEither extends App {
   }
 
   def error(a: String)(s: String): String = {
+    println("++++" + a)
     a + s
   }
-
-
 }

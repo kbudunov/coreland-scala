@@ -1,6 +1,6 @@
 package com.kbudunov.lesson.core.fp.function
 
-object PartialFunctionOrElseOrThan extends App {
+object PartialFunctionChaining extends App {
   //Main feature of partial functions is that, you can chain them together!
 
   // converts 1 to "one", etc., up to 5
@@ -26,10 +26,12 @@ object PartialFunctionOrElseOrThan extends App {
   }
 
   //List(0,1,2) map { divide } //it does not work! Because map method does not invoke isDefinedAt method
+
   List(0, 1, 2) collect { divide } //It works because collect method invokes isDefinedAt under the hood
 
   //Notice that have a different type elements!
   //List(42, "cat") map { case i: Int     => i + 1 } //It does not work!
+
   val result: Seq[Int] =  List(42, 11, "cat") collect { case i: Int => i + 1 } //It works because collect method invokes isDefinedAt under the hood
   println(result)
 

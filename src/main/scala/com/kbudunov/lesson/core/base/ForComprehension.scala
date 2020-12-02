@@ -1,11 +1,25 @@
 package com.kbudunov.lesson.core.base
 
 object ForComprehension extends App {
-  val names = Array("chris", "ed", "maurice")
-  val capNames = for (e <- names) yield e.capitalize
-  val lengths = for (e <- names) yield {
-    // imagine that this required multiple lines of code
-    e.length
-  } //Array(5, 2, 7)
+
+  def gameResults(): Seq[(String, Int)] = ("Daniel", 3500) :: ("Melissa", 13000) :: ("John", 7000) :: Nil
+
+  def hallOfFame = for {
+    result <- gameResults()
+    (name, score) = result //unapply сопоставление с образом
+    if score > 5000
+  } yield name.capitalize
+
+
+  val lists = List(1, 2, 3) :: List.empty :: List(5, 3) :: Nil
+
+  for {
+    list @ head :: _ <- lists
+  } yield list.size
+
+
+  val names = Map("fname" -> "Ed", "lname" -> "Chigliak")
+  for ((k,v) <- names) println(s"key: $k, value: $v")
+
 
 }
