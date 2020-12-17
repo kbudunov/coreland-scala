@@ -1,7 +1,6 @@
-package com.kbudunov.lesson.algorithm
+package com.kbudunov.lesson.algorithm.fibonacci
 
-object FibonacciNumbers extends App {
-
+object LoopVarResolution extends App {
   println(fib(5))
 
   def fib(x: Int): Int = {
@@ -17,7 +16,4 @@ object FibonacciNumbers extends App {
     }
     a
   }
-
-
-
 }

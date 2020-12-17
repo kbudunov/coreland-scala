@@ -2,7 +2,7 @@ package com.kbudunov.lesson.core.fp.function
 
 //closure allows a function to access variables outside its immediate lexical scope
 object Closure extends App {
-  var hello = "Hello"
+  var hello = "Hello" //Achtung es ist VAR!!!
   def sayHello(name: String): Unit = { println(s"$hello, $name") }
   val foo = new Foo
 
@@ -13,8 +13,6 @@ object Closure extends App {
   hello = "Hola"
   // the exec method of foo, and see what happens
   foo.exec(sayHello, "Lorenzo")
-
-
 
   var votingAge = 18
   val isOfVotingAge = (age: Int) => age >= votingAge

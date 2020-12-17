@@ -10,12 +10,6 @@ object LoopsVsMap extends App {
     if c != 'l'
   } yield c.toUpper
 
-//  for { //for into for
-//    line <- source.getLines
-//    char <- line
-//    if char.isLetter
-//  }
-
   val nieces = List("emily", "hannah", "mercedes", "porsche")
   for (n <- nieces) yield n.capitalize //List(Emily, Hannah, Mercedes, Porsche)
 
@@ -25,18 +19,18 @@ object LoopsVsMap extends App {
   for ((k,v) <- names) println(s"key: $k, value: $v")
 
   //ACHTUNG!!!
-  // #1 - input (my code)
+  // #1 - source code
   for (i <- 1 to 10) println(i)
-  // #1 - compiler output
+  // #1 - compiled code
   1.to(10).foreach(((i) => println(i)))
 
   //ACHTUNG!!!
-  // #2 - input code
+  // #2 - source code
   for {
     i <- 1 to 10
     if i % 2 == 0
   } println(i)
-  // #2 - translated output
+  // #2 - compiled code
   1.to(10).withFilter(((i) => i.$percent(2).$eq$eq(0))).foreach(((i) =>
     println(i)))
 

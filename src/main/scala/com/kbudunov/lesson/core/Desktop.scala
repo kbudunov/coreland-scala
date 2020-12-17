@@ -1,5 +1,7 @@
 package com.kbudunov.lesson.core
 
-object Desktop extends App {
+import java.time.Instant
 
+object Desktop extends App {
+    println(Instant.now)
 }

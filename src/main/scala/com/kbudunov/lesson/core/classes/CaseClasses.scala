@@ -12,7 +12,7 @@ object CaseClasses extends App {
     case CaseCalculator(ourBrand, ourModel) => "Calculator: %s %s is of unknown type".format(ourBrand, ourModel)
   }
 
-  def calcTypeSimple(calc: CaseCalculator) = calc match {
+  def calcTypeSimple(calc: CaseCalculator): String = calc match {
     case CaseCalculator(_, _) => "Calculator of unknown type"
     case _ => "Calculator of unknown type"
   }

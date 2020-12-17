@@ -23,8 +23,8 @@ object FunctionsAsVariables extends App {
   println(double(2))
 
 
-  def modMethod1(i: Int) = i % 2 == 0
-  def modMethod2(i: Int) = { i % 2 == 0 }
+  def modMethod1(i: Int): Boolean = i % 2 == 0
+  def modMethod2(i: Int): Boolean = { i % 2 == 0 }
   def modMethod3(i: Int): Boolean = i % 2 == 0
   def modMethod4(i: Int): Boolean = { i % 2 == 0 }
 

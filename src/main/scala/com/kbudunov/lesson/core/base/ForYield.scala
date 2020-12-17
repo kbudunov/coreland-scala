@@ -1,10 +1,10 @@
 package com.kbudunov.lesson.core.base
 
-object ForComprehension extends App {
+object ForYield extends App {
 
   def gameResults(): Seq[(String, Int)] = ("Daniel", 3500) :: ("Melissa", 13000) :: ("John", 7000) :: Nil
 
-  def hallOfFame = for {
+  def hallOfFame: Seq[String] = for {
     result <- gameResults()
     (name, score) = result //unapply сопоставление с образом
     if score > 5000

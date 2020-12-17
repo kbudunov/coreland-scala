@@ -1,6 +1,6 @@
 package com.kbudunov.lesson.core.classes
 
-object Begining extends App {
+object Beginning extends App {
   class PersonVar(var name: String)
   val pVar = new PersonVar("Alvin Alexander")
   println(pVar.name)
