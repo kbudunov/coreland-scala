@@ -13,15 +13,14 @@ object FunctionsAsVariables extends App {
   val add2 = (x: Int, y: Int) => x + y
 
   // explicit approach
-  val add3: (Int, Int) => Int = (x,y) => { x + y }
-  val add4: (Int, Int) => Int = (x,y) => x + y
-  val addThenDouble: (Int, Int) => Int = (x,y) => {
+  val add3: (Int, Int) => Int = (x, y) => { x + y }
+  val add4: (Int, Int) => Int = (x, y) => x + y
+  val addThenDouble: (Int, Int) => Int = (x, y) => {
     val a = x + y
     2 * a
   }
 
   println(double(2))
-
 
   def modMethod1(i: Int): Boolean = i % 2 == 0
   def modMethod2(i: Int): Boolean = { i % 2 == 0 }

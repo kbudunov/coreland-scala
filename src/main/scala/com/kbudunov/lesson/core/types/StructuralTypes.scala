@@ -19,4 +19,4 @@ class Dog {
 }
 class Klingon { def speak(): Unit = { println("Qapla!") } }
 
-class Kat { def makeNoise(message: String): Unit = { println("myaw!!!") }}
+class Kat { def makeNoise(message: String): Unit = { println("myaw!!!") } }

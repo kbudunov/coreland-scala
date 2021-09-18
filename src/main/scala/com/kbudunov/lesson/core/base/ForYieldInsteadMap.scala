@@ -1,7 +1,7 @@
 package com.kbudunov.lesson.core.base
 
 object ForYieldInsteadMap extends App {
-  case class Person (name: String)
+  case class Person(name: String)
   val friends = Vector("Mark", "Regina", "Matt")
 
   val result = for (f <- friends) yield Person(f) //it works like map

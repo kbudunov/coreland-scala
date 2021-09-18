@@ -9,12 +9,13 @@ object CaseClasses extends App {
     case CaseCalculator("HP", "20B") => "financial"
     case CaseCalculator("HP", "48G") => "scientific"
     case CaseCalculator("HP", "30B") => "business"
-    case CaseCalculator(ourBrand, ourModel) => "Calculator: %s %s is of unknown type".format(ourBrand, ourModel)
+    case CaseCalculator(ourBrand, ourModel) =>
+      "Calculator: %s %s is of unknown type".format(ourBrand, ourModel)
   }
 
   def calcTypeSimple(calc: CaseCalculator): String = calc match {
     case CaseCalculator(_, _) => "Calculator of unknown type"
-    case _ => "Calculator of unknown type"
+    case _                    => "Calculator of unknown type"
   }
 
   val a = Person() // corresponds to apply()
@@ -28,7 +29,7 @@ object CaseClasses extends App {
 
 case class CaseCalculator(brand: String, model: String)
 
-case class Person (var name: String, var age: Int)
+case class Person(var name: String, var age: Int)
 object Person {
   def apply() = new Person("<no name>", 0)
   def apply(name: String) = new Person(name, 0)

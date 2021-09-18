@@ -16,7 +16,7 @@ object CollectionExample extends App {
   def timesTwo(i: Int): Int = i * 2
   numbers.map(timesTwo)
 
-  numbers.foreach((i: Int) => i * 2)  //side effects
+  numbers.foreach((i: Int) => i * 2) //side effects
 
   numbers.filter((i: Int) => i % 2 == 0)
   def isEven(i: Int): Boolean = i % 2 == 0
@@ -30,11 +30,12 @@ object CollectionExample extends App {
 
   numbers.drop(5) //drop удаляет первые i элементов
 
-  numbers.foldLeft(0)((m: Int, n: Int) => m + n) //0 - перв.знач.аккум. оно записывается в m: Int идет слеваНаправо
-  numbers.foldRight(0){(m: Int, n: Int) => m + n }
+  numbers.foldLeft(0)((accumulator: Int, n: Int) => accumulator + n) //0 - перв.знач.аккум. оно записывается в m: Int идет слеваНаправо
+  numbers.foldRight(0) { (accumulator: Int, n: Int) =>
+    accumulator + n
+  }
 
-
-  List(List(1, 2), List(3, 4)).flatten //List(1, 2, 3, 4)
+  List(List(1, 2), List(3, 4)).flatten //List(1, 2, 3, 4) схлопывает List[List]
 
   val nestedNumbers = List(List(1, 2), List(3, 4))
   nestedNumbers.map((x: List[Int]) => x.map(_ * 2)).flatten //List(2, 4, 6, 8)
@@ -42,6 +43,6 @@ object CollectionExample extends App {
 
   val extensions = Map("steve" -> 100, "bob" -> 101, "joe" -> 201)
   extensions.filter((namePhone: (String, Int)) => namePhone._2 < 200)
-  extensions.filter({case (_, extension) => extension < 200})
+  extensions.filter { case (_, extension) => extension < 200 }
 
 }

@@ -26,7 +26,7 @@ object Closure extends App {
 class Foo {
   // a method that takes a function and a string, and passes the string into
   // the function, and then executes the function
-  def exec(f:(String) => Unit, name: String): Unit = {
+  def exec(f: (String) => Unit, name: String): Unit = {
     f(name)
   }
 }

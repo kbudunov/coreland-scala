@@ -16,8 +16,6 @@ object PartialFunction extends App {
   //Stage 2. Apply
   if (dividePF.isDefinedAt(1)) dividePF(1)
 
-
-
   //often written using case statements
   //notice it will work only for subSet of input values
   val divide2: PartialFunction[Int, Int] = {
@@ -25,12 +23,11 @@ object PartialFunction extends App {
   }
 
   // converts 1 to "one", etc., up to 5
-  val convertLowNumToString: PartialFunction[Int, String] = new PartialFunction[Int, String] {
-    val nums: Array[String] = Array("one", "two", "three", "four", "five")
-    def apply(i: Int): String = nums(i-1)
-    def isDefinedAt(i: Int): Boolean = i > 0 && i < 6
-  }
-
-
+  val convertLowNumToString: PartialFunction[Int, String] =
+    new PartialFunction[Int, String] {
+      val nums: Array[String] = Array("one", "two", "three", "four", "five")
+      def apply(i: Int): String = nums(i - 1)
+      def isDefinedAt(i: Int): Boolean = i > 0 && i < 6
+    }
 
 }

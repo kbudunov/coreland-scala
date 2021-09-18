@@ -2,12 +2,12 @@ package com.kbudunov.lesson.core.classes
 
 class Objects {
   val firstBar = new Bar("first")
-  val secondBar = Bar("second")
+  val secondBar: Bar = Bar("second")
 
-  Timer.currentCount
+  Timer.currentCount()
 }
 
-class Bar(foo: String)
+case class Bar(foo: String)
 
 object Bar {
   def apply(foo: String) = new Bar(foo)

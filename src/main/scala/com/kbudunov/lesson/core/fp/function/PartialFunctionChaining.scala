@@ -32,7 +32,7 @@ object PartialFunctionChaining extends App {
   //Notice that have a different type elements!
   //List(42, "cat") map { case i: Int     => i + 1 } //It does not work!
 
-  val result: Seq[Int] =  List(42, 11, "cat") collect { case i: Int => i + 1 } //It works because collect method invokes isDefinedAt under the hood
+  val result: Seq[Int] = List(42, 11, "cat") collect { case i: Int => i + 1 } //It works because collect method invokes isDefinedAt under the hood
   println(result)
 
 }

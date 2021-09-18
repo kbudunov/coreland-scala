@@ -2,10 +2,7 @@ package com.kbudunov.lesson.core.exception
 
 import java.io.IOException
 
-import javax.sound.sampled.{
-  LineUnavailableException,
-  UnsupportedAudioFileException
-}
+import javax.sound.sampled.{LineUnavailableException, UnsupportedAudioFileException}
 
 object ThrowsExample extends App {
 

@@ -7,7 +7,6 @@ object ReturnFunction extends App {
   val sayHello: String => String = saySomething("Hello")
   sayHello("Al")
 
-
   def greeting(language: String): String => String = (name: String) => {
     language match {
       case "english" => "Hello, " + name
@@ -18,6 +17,5 @@ object ReturnFunction extends App {
   val buenosDias: String => String = greeting("spanish")
   hello("Al")
   buenosDias("Lorenzo")
-
 
 }

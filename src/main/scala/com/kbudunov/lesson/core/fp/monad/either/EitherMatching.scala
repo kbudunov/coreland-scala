@@ -3,7 +3,7 @@ package com.kbudunov.lesson.core.fp.monad.either
 object EitherMatching extends App {
   //matching
   val result: Any = foo(3) match {
-    case Left(msg) => msg
+    case Left(msg)  => msg
     case Right(msg) => msg
   }
 

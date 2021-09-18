@@ -10,7 +10,6 @@ object AccessMode extends App {
 //  Public
 }
 
-
 class FooObjectPrivate {
 //  Object-private scope
   private[this] def isFoo = true

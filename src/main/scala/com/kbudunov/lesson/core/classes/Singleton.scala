@@ -8,7 +8,8 @@ object Singleton extends App {
 class Brain private {
   override def toString = "This is the brain."
 }
+
 object Brain {
-  val brain = new Brain
-  def getInstance = brain
+  private val brain = new Brain
+  def getInstance: Brain = brain
 }

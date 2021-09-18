@@ -5,7 +5,7 @@ object EitherForYield extends App {
   //Пример 1. схлопнул вложенность
   val eitherLoop: Either[String, Int] = for {
     a <- foo(4)
-    c <- baz(a + 10)
+    c <- { println(s"a = " + a); baz(a + 10) } //попадем сюда только если Right(a)
   } yield c
 
   println(eitherLoop)

@@ -8,6 +8,5 @@ object Regexp extends App {
 
   val newAddress = numPattern.replaceAllIn("123 Main Street", "x")
 
-
   println(match1)
 }

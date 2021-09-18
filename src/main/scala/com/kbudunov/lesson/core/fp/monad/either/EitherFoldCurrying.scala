@@ -11,7 +11,7 @@ object EitherFoldCurrying extends App {
   println(result)
 
   def foo(a: Int): Either[String, Int] = {
-    if (a < 0 ) Left(s"$a < 0")
+    if (a < 0) Left(s"$a < 0")
     else Right(a)
   }
 

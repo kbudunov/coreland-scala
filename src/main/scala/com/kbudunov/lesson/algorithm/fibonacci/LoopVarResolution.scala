@@ -1,7 +1,7 @@
 package com.kbudunov.lesson.algorithm.fibonacci
 
 object LoopVarResolution extends App {
-  println(fib(5))
+  println(fib(4))
 
   def fib(x: Int): Int = {
     var a = 0
@@ -9,9 +9,9 @@ object LoopVarResolution extends App {
     var r = 0
 
     while (r < x) {
-      val c = a + b
-      a = b
-      b = c
+      val c = b + a
+      b = a
+      a = c
       r = r + 1
     }
     a

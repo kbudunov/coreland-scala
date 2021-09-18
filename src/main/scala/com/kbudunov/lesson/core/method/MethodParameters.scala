@@ -1,6 +1,6 @@
 package com.kbudunov.lesson.core.method
 
-object MethodParameters extends  App {
+object MethodParameters extends App {
   val p = new Pizza
   p.update(crustSize = 16, crustType = "Thick") //it works!
 

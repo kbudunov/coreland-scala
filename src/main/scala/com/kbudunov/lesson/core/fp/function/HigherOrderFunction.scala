@@ -1,29 +1,27 @@
 package com.kbudunov.lesson.core.fp.function
 
 object HigherOrderFunction extends App {
-  def executeFunction(callback:() => Unit): Unit = {
+  def executeFunction(callback: () => Unit): Unit = {
     callback()
   }
   val sayHello = () => { println("Hello") }
   executeFunction(sayHello)
 
-
   def exec(callback: Int => Unit): Unit = {
     // invoke the function we were given, giving it an Int parameter
     callback(1)
   }
-  val plusOne = (i: Int) => { println(i+1) }
+  val plusOne = (i: Int) => { println(i + 1) }
   exec(plusOne)
 
-
-  def executeXTimes(callback:() => Unit, numTimes: Int): Unit = {
+  def executeXTimes(callback: () => Unit, numTimes: Int): Unit = {
     for (i <- 1 to numTimes) callback()
   }
+
   val sayHello1 = () => println("Hello")
   executeXTimes(sayHello1, 3)
 
-
-  def executeAndPrint(f:(Int, Int) => Int, x: Int, y: Int): Unit = {
+  def executeAndPrint(f: (Int, Int) => Int, x: Int, y: Int): Unit = {
     val result = f(x, y)
     println(result)
   }
@@ -46,16 +44,13 @@ object HigherOrderFunction extends App {
   case class Person(name: String)
   exec(printTwoThings, "Hello", Person("Dave"))
 
-
-
 //explicit approach
   // 2a - define a method to pass in
-  def printTwoThings (a: Any, b: Any): Unit = { //explicit approach here
+  def printTwoThings(a: Any, b: Any): Unit = { //explicit approach here
     println(a)
     println(b)
   }
   // 3a - pass the printTwoThings method to the exec method
   exec(printTwoThings, "Hello", Person("Dave"))
-
 
 }

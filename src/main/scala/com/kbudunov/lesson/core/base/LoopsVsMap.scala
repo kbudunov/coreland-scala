@@ -16,7 +16,7 @@ object LoopsVsMap extends App {
   for (i <- 1 to 10 if i < 4) println(i)
 
   val names = Map("fname" -> "Robert", "lname" -> "Goren")
-  for ((k,v) <- names) println(s"key: $k, value: $v")
+  for ((k, v) <- names) println(s"key: $k, value: $v")
 
   //ACHTUNG!!!
   // #1 - source code
@@ -31,8 +31,9 @@ object LoopsVsMap extends App {
     if i % 2 == 0
   } println(i)
   // #2 - compiled code
-  1.to(10).withFilter(((i) => i.$percent(2).$eq$eq(0))).foreach(((i) =>
-    println(i)))
+  1.to(10)
+    .withFilter(((i) => i.$percent(2).$eq$eq(0)))
+    .foreach(((i) => println(i)))
 
   // #3 - input code
   for {
@@ -41,10 +42,10 @@ object LoopsVsMap extends App {
     if i % 2 == 0
   } println(i)
   // #3 - translated output
-  1.to(10).withFilter(((i) => i.$bang$eq(1)))
-    .withFilter(((i)
-    => i.$percent(2).$eq$eq(0))).foreach(((i) => println(i)))
-
+  1.to(10)
+    .withFilter(((i) => i.$bang$eq(1)))
+    .withFilter(((i) => i.$percent(2).$eq$eq(0)))
+    .foreach(((i) => println(i)))
 
   // #4 - input code
   for { i <- 1 to 10 } yield i

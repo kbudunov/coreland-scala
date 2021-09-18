@@ -1,6 +1,5 @@
 package com.kbudunov.lesson.core.classes
 
-
 class CalculatorDefault {
   val brand: String = "HP"
   def add(m: Int, n: Int): Int = m + n
@@ -22,7 +21,8 @@ class ScientificCalculator(brand: String) extends Calculator(brand) {
   def log(m: Double, base: Double): Double = math.log(m) / math.log(base)
 }
 
-class EvenMoreScientificCalculator(brand: String) extends ScientificCalculator(brand) {
+class EvenMoreScientificCalculator(brand: String)
+    extends ScientificCalculator(brand) {
   def log(m: Int): Double = log(m, math.exp(1))
 }
 

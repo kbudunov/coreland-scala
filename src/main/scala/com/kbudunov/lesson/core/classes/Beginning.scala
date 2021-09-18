@@ -16,5 +16,4 @@ object Beginning extends App {
 //  p.name
 //  p.name = "Fred Flintstone"
 
-
 }

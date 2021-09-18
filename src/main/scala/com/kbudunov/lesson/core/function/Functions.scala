@@ -7,7 +7,7 @@ object Functions extends App {
   println(three)
 
   def threeExample(): Int = 1 + 2
-  println(threeExample)
+  println(threeExample())
 
   def timesTwo(i: Int): Int = {
     println("hello world")

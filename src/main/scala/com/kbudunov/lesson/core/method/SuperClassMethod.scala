@@ -1,8 +1,6 @@
 package com.kbudunov.lesson.core.method
 
-object SuperClassMethod extends App {
-
-}
+object SuperClassMethod extends App {}
 
 trait Human {
   def hello = "the Human trait"
@@ -14,9 +12,13 @@ trait Father extends Human {
   override def hello = "Father"
 }
 
+//Интересная штука!!! super[Mother].hello
+
 class Child extends Human with Mother with Father {
   def printSuper = super.hello
-  def printMother = super[Mother].hello //DDD problem with traits, which realisation to choose like C#
-  def printFather = super[Father].hello //DDD problem with traits, which realisation to choose like C#
+  def printMother =
+    super[Mother].hello //DDD problem with traits, which realisation to choose like C#  ВАЖНО!!!
+  def printFather =
+    super[Father].hello //DDD problem with traits, which realisation to choose like C#
   def printHuman = super[Human].hello
 }
