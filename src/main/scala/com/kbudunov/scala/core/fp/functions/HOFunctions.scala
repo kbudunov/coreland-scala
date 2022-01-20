@@ -76,4 +76,9 @@ object HOFunctions extends App {
   println(add3(10))
   println(superAdder(3)(10))
 
+
+  def curriedFormatter(c: String)(x: Double): String = c.format(x)
+
+  val standardFormat: (Double => String) = curriedFormatter("%4.2f") //you have to write return type
+  val preciseFormat: (Double => String) = curriedFormatter("%10.8f")
 }
